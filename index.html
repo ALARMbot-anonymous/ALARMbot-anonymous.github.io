@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="description"
+        content="">
+  <meta name="keywords" content="Nerfies, D-NeRF, NeRF">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ALARMbot</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script> -->
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/lab.png">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+  <div class="navbar-menu">
+    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+      <!-- <a class="navbar-item" href="https://alarm-bot.github.io">
+        <span class="icon">
+          <i class="fas fa-home"></i>
+        </span>
+
+      </a> -->
+      </div>
+    </div>
+
+  </div>
+</nav>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">ALARMbot: Autonomous Laboratory Safety Inspection and Operable Hazard Intervention Robot Enabled by Foundation Models</h1>
+          <div class="is-size-5 publication-authors">
+            <!-- <span class="author-block">
+              <a href="https://www.shoujie.top/">Shoujie Li</a><sup>*1 </sup> </span>
+            <span class="author-block">
+              <a href="https://scpsyl.github.io">Yushan Liu</a><sup>*1 </sup> </span>
+            <span class="author-block">
+              Xintao Chao<sup>*1</sup></span>
+            <span class="author-block">
+              <a href="https://huangyan28.github.io/">Yan Huang</a><sup>1 </sup> </span>
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?user=1fzb_z8AAAAJ&hl=zh-CN&oi=sra">Xiao-ping Zhang</a><sup>1 </sup> </span>
+            <span class="author-block">
+              <a href="https://ssr-group.net/">Wenbo Ding</a><sup>†1 </sup></span> -->
+            <span class="author-block">Anonymous Authors</span>
+          </div>
+
+          <!-- <div class="is-size-5 publication-authors">
+            <br><span class="author-block"><sup>1</sup>Tsinghua University </span><br>
+            <br><span class="author-block">Anonymous Institution</span><br>
+            <span class="author-block" style="font-size: 0.9em;"><sup>*</sup>Equal contribution </span>
+            <span class="author-block"></span>
+            <span class="author-block" style="font-size: 0.9em;"><sup>†</sup>Corresponding author </span>
+          </div> -->
+          
+
+          <!-- <div class="column has-text-centered">
+            <div class="publication-links">
+              <span class="link-block">
+                <a href="resources/ALARMbot.pdf"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span> -->
+              <!-- <span class="link-block">
+                <a href=""
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span> -->
+              
+              
+              <!-- Dataset Link. -->
+              <!-- <span class="link-block">
+                <a href</footer>="https://github.com/google/nerfies/releases/tag/0.1"
+                   c</div>lass="external-link button is-normal is-rounded is-dark">
+                  <span class="icon"</a>>
+                      <i class="far fa-images"></i>
+                  </span>
+                  <span>Da</div>ta</span>
+                  </a> -->
+
+              <!-- <span class="link-block">
+                <a href="https://www.youtube.com/watch?v=nL6edANMAHw"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Video</span>
+                </a>
+              </span> -->
+
+              <!-- Code Link. -->
+              <!-- <span class="link-block">
+                <a href=""
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code: Soon</span>
+                  </a>
+              </span>
+            </div> -->
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+   
+
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-2">Abstract</h2>
+        <div class="content fixed-width has-text-justified">
+          <p>
+          Ensuring laboratory safety is a critical challenge due to the presence of hazardous materials and complex operational environments. 
+          In this paper, we present an autonomous laboratory inspection robot (ALARMbot) leveraging foundation models for intelligent safety management. 
+          The system integrates a mobile platform, multi-modal sensors, and a 6-DoF manipulator. 
+          By fusing LiDAR-based mapping with vision-and-language models, the robot achieves semantic navigation and fine-grained functional zone recognition. 
+          A hierarchical framework combines YOLOv8-OBB visual perception (achieving 91.2% mAP on custom datasets) with vision-language risk reasoning for real-time hazard detection. 
+          The robot autonomously intervenes in operable risks with an average response time of 8.5 seconds and navigates complex laboratory layouts with a 97.5% success rate. 
+          Extensive real-world experiments demonstrate reliable navigation, accurate risk detection, and effective hazard mitigation. 
+          This work offers a practical solution for intelligent laboratory safety and highlights the advantages of foundation models in autonomous inspection robotics.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+    </section>
+
+    <section class="section">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <!-- <h2 class="title is-2">Overview</h2> -->
+        <div class="content fixed-width has-text-justified">
+        <figure class="image">
+            <img src="static/images/overview-new.png" alt="Overview of our ALARMbot." style="width: 100%; height: auto;"/>
+        </figure>
+      </div>
+      </div>
+    </div>
+
+    <!-- Hardware Design. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-2">Hardware Design</h2>
+        <div class="content fixed-width has-text-justified">
+          <p>
+            The hardware architecture consists of three integrated modules: a mobile chassis, perception sensors, and a manipulation subsystem.
+            A ROS-driven mobile platform integrating a wheeled chassis with RGB-D cameras, LiDAR and a 6-DoF robotic arm fitted with an adaptive gripper. 
+            All perception, planning and control modules run on a central compute unit, with SSH-based communication enabling real-time remote monitoring.
+          </p>
+           <figure class="image">
+            <img src="static/images/Hardware.png" alt="System Hardware of ALARMbot." style="width: 100%; height: auto;"/>
+          </figure>
+        </div>
+      </div>
+    </div>
+    </section>
+    <!--/ Hardware Design. -->
+
+    <!-- Navigation. -->
+     <section class="section">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-2">Navigation</h2>
+
+        <div class="content fixed-width has-text-justified">
+          <p>
+            The navigation system is designed to enable the robot to autonomously navigate through complex laboratory environments. 
+            It utilizes a combination of LiDAR-based mapping and vision-and-language models for semantic navigation and functional zone recognition.
+          </p>
+        </div>
+
+        <h3 class="title is-3" style="text-align: center;">Navigation Architecture</h3>
+        <div class="content fixed-width has-text-justified">
+          <figure class="image">
+            <img src="static/images/navi-framework.png" alt=""/>
+          </figure>
+          <p>
+            Based on navigation instructions and multimodal sensor inputs—including RGB images and LiDAR scans—the system generates query tokens and image tokens through dedicated Modality Fusion Projectors, 
+            integrating them within a unified Observation Encoder. 
+            At each timestep, ChemistryNav processes both historical and current observations alongside navigation-oriented tokens to produce explicit navigation actions. 
+            Real-time robot positions, acquired via precisely calibrated LiDAR sensors, are dynamically aligned with an evolving Fine-Grained Semantic Map, 
+            providing comprehensive semantic and spatial information essential for effective dynamic route planning and targeted risk management tasks.
+          </p>     
+        </div>    
+          
+        <h3 class="title is-3" style="text-align: center;">Full-floor Exploration</h3>
+        <div class="content fixed-width has-text-justified">
+          <figure class="image">
+            <img src="static/images/nav-pic2.png" alt="" style="width: 68%; height: auto;"/>
+          </figure>
+          <p>
+            User prompts trigger the robot to visit each room, record whether it is a laboratory, tag its location, and store the data for designing a comprehensive cross-room inspection route.
+            The robot autonomously explores the entire floor, generating a complete semantic map showing the spatial distribution and functional categorization of work areas.
+            This map is continuously updated as the robot navigates, allowing for real-time adjustments to its path and actions.
+          </p>
+        </div>
+
+        <h3 class="title is-3" style="text-align: center;">Functional Zone Annotation</h3>
+        <div class="content fixed-width has-text-justified">
+          <figure class="image">
+            <img src="static/images/nav-pic3.png" alt=""/>
+          </figure>
+          <p style="text-align: left;"></p>
+            Once the robot reaches an appropriate position near a workbench, the robotic arm's camera captures desktop images, 
+            which are then processed by Inspect agent, which identifies objects on the workbench and assigns a unique functional-zone label according to predefined criteria.
+            After completing the exploration and classification, the agent compiles a complete semantic map showing the spatial distribution and functional categorization of work areas.
+          </p>
+        </div>
+      </div>
+    </div>
+    </section>
+    <!--/ Navigation -->
+
+    <!-- Inspection -->
+    <section class="section">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-2">Inspection</h2>
+        <div class="content fixed-width has-text-justified">
+          <p>
+            A two-stage detection framework  with a YOLO-based Visual Perception Module and a VLM-based Risk Reasoning Module to detect objects and assess hazards in real-time.
+             The results are sent to the Inspect Agent, which plans actions or archives data, and uploads risk assessments and outcomes to the Interaction UI for monitoring.
+          </p>
+        </div>
+
+        <h3 class="title is-3" style="text-align: center;">Detection</h3>
+        <div class="content fixed-width has-text-justified">
+          <figure class="image">
+            <img src="static/images/detection.png" alt=""/>
+          </figure>
+          <p style="text-align: left;"></p>
+          The Visual Perception Module utilizes a YOLOv8 model trained on real-world, public, and synthetic datasets to detect objects from images collected along the inspection route. 
+          The detection results are post-processed into a structured JSON format, paired with prompt queries, and fed into the Detect Agent for risk reasoning. 
+          The identified risks are subsequently passed to the Inspect Agent to drive downstream decision-making and action planning.
+          </p>
+        </div>
+
+        <h3 class="title is-3" style="text-align: center;">Manipulation</h3>
+        <div class="content fixed-width has-text-justified">
+            <figure class="image"></figure>
+            <img src="static/images/manipulation.png" alt=""/>
+          </figure>
+          <p style="text-align: left;"></p>
+          The Inspect Agent receives structured detection results containing identified objects and inferred risks. 
+          It performs risk reasoning and action planning through three stages: Risk Matching, Template Retrieval, and Meta-Action Sequencing. 
+          Based on predefined Meta-Action Skills, the system composes executable motion sequences, which are then carried out by the robotic manipulator. 
+          Execution results, including success or warnings, are uploaded to the Interaction UI for monitoring and logging.
+          </p>
+        </div>
+      </div>
+    </div>
+    </section>
+    <!--/ Inspection -->
+    
+
+    <!-- Experiments. -->
+     <section class="section">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-2">Experiments</h2>
+        <div class="content fixed-width has-text-justified">
+            <p>
+              We evaluate our robotic system in unfamiliar laboratory environments, testing navigation, risk detection, and risk elimination. 
+              An intuitive human-robot interface accepts natural-language commands, ensuring stable and precise task execution.
+            </p>
+        </div>
+
+        <h3 class="title is-3" style="text-align: center;">Navigation Performance</h3>
+        <div class="content fixed-width has-text-justified">
+          <!-- <figure class="image">
+            <img src="static/images/detection.png" alt=""/>
+          </figure> -->
+          <p>
+         We designed a real-world experiment where the robot autonomously explores an entire floor and searches for a specified laboratory. 
+         The robot autonomously explores large-scale spaces, identifies laboratory characteristics, and records the locations of rooms that qualify as laboratories.
+         As a result, the robot successfully navigated the entire floor, planned the exploration route, and found the specified laboratory.
+          </p>
+          <div style="display: flex; justify-content: center;">
+            <iframe width="800" height="450" src="https://www.youtube.com/embed/L1vX0DbAdV0?si=xfAdrL1gv98HrieP" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+            </iframe>
+          </div>
+        </div>
+
+        <h3 class="title is-3" style="text-align: center;">Detection Performance</h3>
+
+        <div class="content fixed-width has-text-justified">
+          <p>
+            We compared the risk detection success rates compared three configurations: Public only, Public + Real, and Public + Real + Synthetic.
+            By using small models trained on diverse datasets, the system achieves better accuracy in risk identification.
+          </p>
+            <figure class="image" style="display: flex; justify-content: center;">
+            <img src="static/images/table-detection.png" alt="" style="width: 100%; height: auto;"/>
+            </figure>
+          </div>
+
+
+        <h3 class="title is-3" style="text-align: center;">Manipulation Performance</h3>
+
+        <div class="content fixed-width has-text-justified">
+          <p>
+            We designed various meta-action-based manipulation experiments to equip our robot with basic laboratory risk mitigation capabilities, including
+            upright fallen bottles, relocate edge-exposed objects, place tipped bottles onto racks, wipe spilled liquids, and clear debris from workbenches.
+            Additionally, we validated some fundamental laboratory operations, such as sorting unclassified reagent bottles and transferring misplaced tubes, 
+            enabling it to perform a variety of essential laboratory tasks. 
+            <br>
+            We provide operation videos from multiple perspectives for various tasks.
+          </p>
+          </div>
+          <div class="columns is-centered">
+          <div class="column is-2 has-text-centered">
+          </div>
+          <div class="column is-one-quarter has-text-centered">
+            <h5 class="subtitle is-5">Front View</h5>
+          </div>
+          <div class="column is-one-quarter has-text-centered">
+          <h5 class="subtitle is-5">Side View</h5>
+          </div>
+          <div class="column is-one-quarter has-text-centered">
+            <h5 class="subtitle is-5">Before Operation</h5>
+          </div>
+          <div class="column is-one-quarter has-text-centered">
+            <h5 class="subtitle is-5">After Operation</h5>
+          </div>
+        </div>
+          <div class="columns is-multiple is-centered">
+            
+            <div class="column is-2 has-text-left">
+              <h5 class="title is-5" style="margin-top: 40%;">Unright Fallen Bottles</h5>
+            </div>
+            <div class="column is-one-quarter" style="display: flex; justify-content: center; align-items: center;">
+              <video style="height: 150%;" autoplay controls muted loop playsinline>
+                <source src="static/videos/fall-z-1.mp4" type="video/mp4">
+              </video>
+            </div>
+            
+            <div class="column is-one-quarter" style="display: flex; justify-content: center; align-items: center;">
+              <video style="height: 150%;" autoplay controls muted loop playsinline>
+                <source src="static/videos/fall-c-1.mp4" type="video/mp4">
+              </video>
+            </div>
+            
+            <div class="column is-one-quarter" style="display: flex; justify-content: center; align-items: center;">
+              <figure class="image" style="width: 75%; height: auto; margin: 0 auto;">
+                <img src="static/images/pick1-t.png" alt="" id="image-before" />
+                
+              </figure>
+            </div>
+            
+            <div class="column is-one-quarter" style="display: flex; justify-content: center; align-items: center;">
+              <figure class="image" style="width: 75%; height: auto; margin: 0 auto;">
+                <img src="static/images/pick3-t.png" alt="" id="image-after" />
+                
+              </figure>
+            </div>
+            
+          </div>
+            
+
+          <div class="columns is-multiple is-centered">
+          <div class="column is-2 has-text-left">
+            <h5 class="title is-5" style="margin-top: 40%;">Reload to Safe Zone</h5>
+          </div>
+            
+            <div class="column is-one-quarter">
+              
+              <video width="100%" height="auto" autoplay controls muted loop playsinline>
+                <source src="static/videos/move-z-1.mp4" type="video/mp4">
+              </video>
+            </div>
+      
+            <div class="column is-one-quarter">
+              <video width="100%" height="auto" autoplay controls muted loop playsinline>
+                <source src="static/videos/move-c-1.mp4" type="video/mp4">
+              </video>
+            </div>
+      
+            <div class="column is-one-quarter">
+              <figure class="image" style="width: 75%; height: auto; margin: 0 auto;">
+                <img src="static/images/move3.png" alt="" id="image-before" />
+                
+              </figure>
+            </div>
+      
+            <div class="column is-one-quarter">
+              <figure class="image" style="width: 75%; height: auto; margin: 0 auto;">
+                <img src="static/images/move4.png" alt="" id="image-before" />
+                
+              </figure>
+            </div>
+          </div>
+
+          <div class="columns is-multiple is-centered">
+            <div class="column is-2 has-text-left">
+              <h5 class="title is-5" style="margin-top: 40%;">Place onto Rack</h5>
+            </div>
+            <div class="column is-one-quarter">
+              <video style="width: 150%; height: auto;" autoplay controls muted loop playsinline>
+                <source src="static/videos/table-z-4.mp4" type="video/mp4">
+              </video>
+            </div>
+      
+            <div class="column is-one-quarter">
+              <video width="100%" height="auto" autoplay controls muted loop playsinline>
+                <source src="static/videos/table-c-4.mp4" type="video/mp4">
+              </video>
+            </div>
+      
+            <div class="column is-one-quarter">
+              <figure class="image" style="width: 75%; height: auto; margin: 0 auto;">
+                <img src="static/images/table1.png" alt="" id="image-before" />
+                
+              </figure>
+            </div>
+      
+            <div class="column is-one-quarter">
+              <figure class="image" style="width: 75%; height: auto; margin: 0 auto;">
+                <img src="static/images/table2.png" alt="" id="image-before" />
+              </figure>
+            </div>
+          </div>
+
+          <div class="columns is-multiple is-centered">
+            <div class="column is-2 has-text-left">
+              <h5 class="title is-5" style="margin-top: 40%;">Wipe Spilled Liquid</h5>
+            </div>
+            <div class="column is-one-quarter">
+              <video style="width: 150%; height: auto;" autoplay controls muted loop playsinline>
+                <source src="static/videos/wipe-z-1.mp4" type="video/mp4">
+              </video>
+            </div>
+      
+            <div class="column is-one-quarter">
+              <video width="100%" height="auto" autoplay controls muted loop playsinline>
+                <source src="static/videos/wipe-c-1.mp4" type="video/mp4">
+              </video>
+            </div>
+      
+            <div class="column is-one-quarter">
+              <figure class="image" style="width: 75%; height: auto; margin: 0 auto;">
+                <img src="static/images/wipe1.png" alt="" id="image-before" />
+                
+              </figure>
+            </div>
+      
+            <div class="column is-one-quarter">
+              <figure class="image" style="width: 75%; height: auto; margin: 0 auto;">
+                <img src="static/images/wipe2.png" alt="" id="image-before" />
+              </figure>
+            </div>
+          </div>
+
+          <div class="columns is-multiple is-centered">
+            <div class="column is-2 has-text-left">
+              <h5 class="title is-5" style="margin-top: 40%;">Clear Trash</h5>
+            </div>
+            <div class="column is-one-quarter">
+              <video width="150%" height="auto" autoplay controls muted loop playsinline>
+                <source src="static/videos/garbage-z-1.mp4" type="video/mp4">
+              </video>
+            </div>
+      
+            <div class="column is-one-quarter">
+              <video width="100%" height="auto" autoplay controls muted loop playsinline>
+                <source src="static/videos/garbage-c-1.mp4" type="video/mp4">
+              </video>
+            </div>
+      
+            <div class="column is-one-quarter">
+              <figure class="image" style="width: 75%; height: auto; margin: 0 auto;">
+                <img src="static/images/garbage1.png" alt="" id="image-before" />
+              </figure>
+            </div>
+      
+            <div class="column is-one-quarter">
+              <figure class="image" style="width: 75%; height: auto; margin: 0 auto;">
+                <img src="static/images/garbage3.png" alt="" id="image-before" />
+              </figure>
+            </div>
+          </div>
+
+          <div class="columns is-multiple is-centered">
+            <div class="column is-2 has-text-left">
+              <h5 class="title is-5" style="margin-top: 40%;">Sort Reagent Bottles</h5>
+            </div>
+            <div class="column is-one-quarter">
+              <video width="150%" height="auto" autoplay controls muted loop playsinline>
+                <source src="static/videos/sort-z-1.mp4" type="video/mp4">
+              </video>
+            </div>
+      
+            <div class="column is-one-quarter">
+              <video width="100%" height="auto" autoplay controls muted loop playsinline>
+                <source src="static/videos/sort-c-1.mp4" type="video/mp4">
+              </video>
+            </div>
+      
+            <div class="column is-one-quarter">
+              <figure class="image" style="width: 75%; height: auto; margin: 0 auto;">
+                <img src="static/images/sort1.png" alt="" id="image-before" />
+              </figure>
+            </div>
+      
+            <div class="column is-one-quarter">
+              <figure class="image" style="width: 75%; height: auto; margin: 0 auto;">
+                <img src="static/images/sort3.png" alt="" id="image-before" />
+              </figure>
+            </div>
+          </div>
+
+          <div class="columns is-multiple is-centered">
+            <div class="column is-2 has-text-left">
+              <h5 class="title is-5" style="margin-top: 40%;">Transfer Test Tubes</h5>
+            </div>
+            <div class="column is-one-quarter">
+              <video width="150%" height="auto" autoplay controls muted loop playsinline>
+                <source src="static/videos/tube-z-1.mp4" type="video/mp4">
+              </video>
+            </div>
+      
+            <div class="column is-one-quarter">
+              <video width="100%" height="auto" autoplay controls muted loop playsinline>
+                <source src="static/videos/tube-c-1.mp4" type="video/mp4">
+              </video>
+            </div>
+      
+            <div class="column is-one-quarter">
+              <figure class="image" style="width: 75%; height: auto; margin: 0 auto;">
+                <img src="static/images/tube1.png" alt="" id="image-before" />
+              </figure>
+            </div>
+      
+            <div class="column is-one-quarter">
+              <figure class="image" style="width: 75%; height: auto; margin: 0 auto;">
+                <img src="static/images/tube2.png" alt="" id="image-before" />
+              </figure>
+            </div>
+          </div>
+
+          <div class="content fixed-width has-text-justified">
+            <p>
+              We achieved high success rates across various tasks, which demonstrate the effectiveness of combining vision-language reasoning with meta-action sequence control for autonomous laboratory risk mitigation, 
+              while also identifying opportunities for further improvements in precision-critical manipulations.
+            </p>
+              <figure class="image" style="display: flex; justify-content: center;">
+              <img src="static/images/table-manipulation.png" alt="" style="width: 80%; height: auto;"/>
+              </figure>
+          </div>
+            
+          <h3 class="title is-3" style="text-align: center;">Inspection Performance</h3>
+          <div class="content fixed-width has-text-justified">
+            <!-- <figure class="image">
+              <img src="static/images/detection.png" alt=""/>
+            </figure> -->
+            <p>
+                We designed a comprehensive inspection experiment. 
+                During the inspection process, the robot autonomously plans the inspection route and performs risk identification and handling in each zone. 
+                For operable risks, the robot autonomously intervenes; for inoperable risks, the robot reports them to human operators. 
+                Additionally, we developed a human-robot interaction interface, allowing operators to control the robot using natural language commands for inspection tasks, 
+                while the robot provides real-time feedback on its current status and operation results through the interface.
+            </p>
+            <div style="display: flex; justify-content: center;">
+              <iframe width="800" height="450" src="https://www.youtube.com/embed/wa0fKQwQvJk?si=FHadHfYMHaVs2ZNw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+              </iframe>
+            </div>
+          </div>
+
+      </div>
+    </div>
+     </section>
+    <!--/ Experiments. -->
+
+    <!-- Conclusion and Future Work. -->
+
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h2 class="title is-2">Conclusion and Future Work</h2>
+        
+        <div class="content fixed-width has-text-justified">
+          <p>
+            We propose the ALARMbot, which unites a LiDAR-equipped mobile base, RGB-D perception, and a 6-DoF manipulator within a ROS framework to deliver semantic-aware navigation, 
+            real-time hazard detection, and autonomous intervention in laboratory settings. Powered by foundation vision-language models and YOLOv8-OBB (91.2 % mAP), 
+            the system handles risks in an average of 8.5 s and completes inspection routes with a 97.5 % success rate, 
+            proving both reliable and effective for intelligent safety management.
+            <br>
+            Future work will extend the methodology to other high-risk domains—industrial plants, chemical warehouses—and explore multi-robot collaboration, 
+            continual learning for dynamic environments, and richer human-robot interaction to create more scalable, adaptive safety solutions.
+          </p>
+        </div>
+        </div>
+      </div>
+
+  </div>
+</section>
+
+<section class="section">
+  <div style="display: flex; justify-content: center;">
+    <iframe width="1200" height="675" src="https://www.youtube.com/embed/nL6edANMAHw?si=MMVJj4E4z16nOVng" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  </div>
+</section>
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title ">BibTeX</h2>
+    <pre><code>
+      
+    </code></pre>
+  </div>
+</section>
+
+
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      
+      <!-- <a class="icon-link" href="https://github.com/scpsyl" class="external-link" disabled>
+        <i class="fab fa-github"></i>
+      </a> -->
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website is licensed under a <a rel="license"
+                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
