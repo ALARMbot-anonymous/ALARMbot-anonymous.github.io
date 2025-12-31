@@ -209,6 +209,20 @@
             <img src="static/images/Hardware.png" alt="System Hardware of ALARMbot." style="width: 100%; height: auto;"/>
           </figure>
         </div>
+
+        <h2 class="title is-2">System Pipeline</h2>
+        <div class="content fixed-width has-text-justified">
+          <p>
+          ALARMbot is an end-to-end system for autonomous safety inspection and closed-loop risk mitigation in unstructured chemical laboratories. 
+          Driven by a unified multi-modal ALARM-System, it translates natural-language commands from a web UI into structured goals, then coordinates three tightly coupled modules:
+          ALARM-Nav builds a metric-semantic map by fusing RGB-D and LiDAR and annotates rooms/zones with VLM-based semantics to plan safe, high-coverage inspection routes;
+          ALARM-Detect performs detection at inspection checkpoints and combines scene context for hazard reasoning, packaging results into structured Hazard Cards with risk type and 3D localization;
+          ALARM-Act converts these cards into safety-constrained action intents, instantiates parameterized primitives from a meta-action library (e.g., uprighting, wiping, placing), and re-inspects after execution to verify mitigation or escalate to humans when necessary.
+          </p>
+           <figure class="image">
+            <img src="static/images/pipeline.png" alt="System Hardware of ALARMbot." style="width: 100%; height: auto;"/>
+          </figure>
+        </div>
       </div>
     </div>
     </section>
