@@ -244,7 +244,7 @@
         <h3 class="title is-3" style="text-align: center;">Full-floor Exploration</h3>
         <div class="content fixed-width has-text-justified">
           <figure class="image">
-            <img src="static/images/nav-pic2.png" alt="" style="width: 68%; height: auto;"/>
+            <img src="static/images/nav2-new.png" alt="" style="width: 68%; height: auto;"/>
           </figure>
           <p>
             User prompts trigger the robot to visit each room, record whether it is a laboratory, tag its location, and store the data for designing a comprehensive cross-room inspection route.
@@ -256,7 +256,7 @@
         <h3 class="title is-3" style="text-align: center;">Functional Zone Annotation</h3>
         <div class="content fixed-width has-text-justified">
           <figure class="image">
-            <img src="static/images/nav-pic3.png" alt=""/>
+            <img src="static/images/nav3-new.png" alt=""/>
           </figure>
           <p style="text-align: left;"></p>
             Once the robot reaches an appropriate position near a workbench, the robotic arm's camera captures desktop images, 
@@ -284,7 +284,7 @@
         <h3 class="title is-3" style="text-align: center;">Detection</h3>
         <div class="content fixed-width has-text-justified">
           <figure class="image">
-            <img src="static/images/detection.png" alt=""/>
+            <img src="static/images/detection-new.png" alt=""/>
           </figure>
           <p style="text-align: left;"></p>
           The Visual Perception Module utilizes a YOLOv8 model trained on real-world, public, and synthetic datasets to detect objects from images collected along the inspection route. 
@@ -296,7 +296,7 @@
         <h3 class="title is-3" style="text-align: center;">Manipulation</h3>
         <div class="content fixed-width has-text-justified">
             <figure class="image"></figure>
-            <img src="static/images/manipulation.png" alt=""/>
+            <img src="static/images/mani-new.png" alt=""/>
           </figure>
           <p style="text-align: left;"></p>
           The Inspect Agent receives structured detection results containing identified objects and inferred risks. 
@@ -329,14 +329,23 @@
             <img src="static/images/detection.png" alt=""/>
           </figure> -->
           <p>
+            <div class="content fixed-width has-text-justified">
+              <p>
+            <!-- We compared the risk detection success rates compared three configurations: Public only, Public + Real, and Public + Real + Synthetic.
+            By using small models trained on diverse datasets, the system achieves better accuracy in risk identification. -->
+              </p>
+            <figure class="image" style="display: flex; justify-content: center;">
+            <img src="static/images/table-nav.png" alt="" style="width: 80%; height: auto;"/>
+            </figure>
+          </div>
          We designed a real-world experiment where the robot autonomously explores an entire floor and searches for a specified laboratory. 
          The robot autonomously explores large-scale spaces, identifies laboratory characteristics, and records the locations of rooms that qualify as laboratories.
          As a result, the robot successfully navigated the entire floor, planned the exploration route, and found the specified laboratory.
           </p>
-          <div style="display: flex; justify-content: center;">
+          <!-- <div style="display: flex; justify-content: center;">
             <iframe width="800" height="450" src="https://www.youtube.com/embed/L1vX0DbAdV0?si=xfAdrL1gv98HrieP" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
             </iframe>
-          </div>
+          </div> -->
         </div>
 
         <h3 class="title is-3" style="text-align: center;">Detection Performance</h3>
@@ -616,10 +625,10 @@
                 Additionally, we developed a human-robot interaction interface, allowing operators to control the robot using natural language commands for inspection tasks, 
                 while the robot provides real-time feedback on its current status and operation results through the interface.
             </p>
-            <div style="display: flex; justify-content: center;">
+            <!-- <div style="display: flex; justify-content: center;">
               <iframe width="800" height="450" src="https://www.youtube.com/embed/wa0fKQwQvJk?si=FHadHfYMHaVs2ZNw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
               </iframe>
-            </div>
+            </div> -->
           </div>
 
       </div>
@@ -650,11 +659,11 @@
   </div>
 </section>
 
-<section class="section">
+<!-- <section class="section">
   <div style="display: flex; justify-content: center;">
     <iframe width="1200" height="675" src="https://www.youtube.com/embed/nL6edANMAHw?si=MMVJj4E4z16nOVng" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
   </div>
-</section>
+</section> -->
 
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
